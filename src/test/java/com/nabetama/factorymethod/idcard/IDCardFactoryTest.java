@@ -2,7 +2,6 @@ package com.nabetama.factorymethod.idcard;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.nabetama.factorymethod.framework.Factory;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
