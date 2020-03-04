@@ -1,6 +1,6 @@
 package com.nabetama.factorymethod.framework;
 
-public interface Factory <T extends Product>{
+public interface Factory<T extends Product> {
 
   default T create(String owner) {
     T product = createProduct(owner);
