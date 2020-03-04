@@ -13,7 +13,7 @@ class BookShelfTest {
 
     Iterator<Book> it = bookShelf.iterator();
     Book book = it.next();
-    Assertions.assertEquals(book.getName(), "foo");
+    Assertions.assertEquals("foo", book.getName());
   }
 
   @Test
@@ -26,7 +26,7 @@ class BookShelfTest {
     Iterator<Book> it = bookShelf.iterator();
     while (it.hasNext()) {
       Book book = it.next();
-      Assertions.assertNotEquals(book, null);
+      Assertions.assertNotEquals(null, book);
       System.out.print(book);
     }
   }
