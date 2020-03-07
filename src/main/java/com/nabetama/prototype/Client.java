@@ -1,9 +1,9 @@
 package com.nabetama.prototype;
 
-public class User {
+public class Client {
   private final Prototype prototype;
 
-  public User(Prototype prototype) {
+  public Client(Prototype prototype) {
     this.prototype = prototype;
   }
 

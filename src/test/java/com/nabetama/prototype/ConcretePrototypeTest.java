@@ -10,9 +10,9 @@ class ConcretePrototypeTest {
   void use() throws CloneNotSupportedException {
     Prototype prototype = new ConcretePrototype();
 
-    User user = new User(prototype);
+    Client client = new Client(prototype);
 
-    Prototype prototypeClone = user.copy();
+    Prototype prototypeClone = client.copy();
     assertNotEquals(prototype, prototypeClone);
   }
 }
