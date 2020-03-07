@@ -1,6 +1,5 @@
-package com.nabetama.builder;
+package com.nabetama.builder.textbuilder;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Director {

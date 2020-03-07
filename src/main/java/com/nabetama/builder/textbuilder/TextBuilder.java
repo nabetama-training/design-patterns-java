@@ -1,4 +1,4 @@
-package com.nabetama.builder;
+package com.nabetama.builder.textbuilder;
 
 import java.util.List;
 
