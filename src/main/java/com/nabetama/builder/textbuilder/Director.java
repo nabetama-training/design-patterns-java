@@ -10,11 +10,12 @@ public class Director {
     this.builder = builder;
   }
 
-  public void construct(){
-    builder.makeTitle("title");
-    builder.makeString("string1");
-    builder.makeItems(Arrays.asList("a", "b", "c"));
-    builder.makeString("string2");
-    builder.close();
+  public void construct() {
+    builder
+        .makeTitle("title")
+        .makeString("string1")
+        .makeItems(Arrays.asList("a", "b", "c"))
+        .makeString("string2")
+        .close();
   }
 }

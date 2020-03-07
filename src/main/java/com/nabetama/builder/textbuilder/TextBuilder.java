@@ -11,23 +11,27 @@ public class TextBuilder implements Builder {
   }
 
   @Override
-  public void makeTitle(String s) {
+  public Builder makeTitle(String s) {
     stringBuilder.append(s);
+    return this;
   }
 
   @Override
-  public void makeString(String s) {
+  public Builder makeString(String s) {
     stringBuilder.append(s);
+    return this;
   }
 
   @Override
-  public void makeItems(List<String> items) {
+  public Builder makeItems(List<String> items) {
     items.forEach(stringBuilder::append);
+    return this;
   }
 
   @Override
-  public void close() {
+  public Builder close() {
     stringBuilder.append(".");
+    return this;
   }
 
   public String build() {
