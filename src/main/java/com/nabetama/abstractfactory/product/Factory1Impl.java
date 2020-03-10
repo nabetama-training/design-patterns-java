@@ -1,4 +1,4 @@
-package com.nabetama.abstractfactory;
+package com.nabetama.abstractfactory.product;
 
 public class Factory1Impl implements AbstractFactory {
 

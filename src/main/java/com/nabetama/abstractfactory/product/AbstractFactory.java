@@ -1,4 +1,4 @@
-package com.nabetama.abstractfactory;
+package com.nabetama.abstractfactory.product;
 
 public interface AbstractFactory {
 

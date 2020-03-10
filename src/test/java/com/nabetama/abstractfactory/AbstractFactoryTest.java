@@ -2,6 +2,9 @@ package com.nabetama.abstractfactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.nabetama.abstractfactory.product.AbstractFactory;
+import com.nabetama.abstractfactory.product.Factory1Impl;
+import com.nabetama.abstractfactory.product.Factory2Impl;
 import org.junit.jupiter.api.Test;
 
 class AbstractFactoryTest {
@@ -13,19 +16,19 @@ class AbstractFactoryTest {
   void testFactoryA() {
     assertEquals(
         abstractFactory1.createProductA().getClass().getName(),
-        "com.nabetama.abstractfactory.ProductA1");
+        "com.nabetama.abstractfactory.product.ProductA1");
     assertEquals(
         abstractFactory2.createProductA().getClass().getName(),
-        "com.nabetama.abstractfactory.ProductA2");
+        "com.nabetama.abstractfactory.product.ProductA2");
   }
 
   @Test
   void testFactoryB() {
     assertEquals(
         abstractFactory1.createProductB().getClass().getName(),
-        "com.nabetama.abstractfactory.ProductB1");
+        "com.nabetama.abstractfactory.product.ProductB1");
     assertEquals(
         abstractFactory2.createProductB().getClass().getName(),
-        "com.nabetama.abstractfactory.ProductB2");
+        "com.nabetama.abstractfactory.product.ProductB2");
   }
 }
