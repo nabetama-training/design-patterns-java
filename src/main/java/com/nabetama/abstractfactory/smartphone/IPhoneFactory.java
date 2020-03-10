@@ -2,18 +2,22 @@ package com.nabetama.abstractfactory.smartphone;
 
 public class IPhoneFactory implements AbstractSmartPhoneFactory {
 
-  @Override
-  public String getVersion() {
-    return "11";
+  private final Cpu cpu;
+
+  private final Browser browser;
+
+  public IPhoneFactory(Cpu cpu, Browser browser) {
+    this.cpu = cpu;
+    this.browser = browser;
   }
 
   @Override
-  public String getCpu() {
-    return "A13 Bionic";
+  public Cpu getCpu() {
+    return cpu;
   }
 
   @Override
-  public String getDefaultBrowser() {
-    return "mobile Safari";
+  public Browser getDefaultBrowser() {
+    return browser;
   }
 }

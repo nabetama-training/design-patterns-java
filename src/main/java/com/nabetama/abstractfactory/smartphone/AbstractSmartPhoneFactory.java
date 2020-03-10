@@ -1,9 +1,8 @@
 package com.nabetama.abstractfactory.smartphone;
 
 public interface AbstractSmartPhoneFactory {
-  String getVersion();
 
-  String getCpu();
+  Cpu getCpu();
 
-  String getDefaultBrowser();
+  Browser getDefaultBrowser();
 }

@@ -2,18 +2,22 @@ package com.nabetama.abstractfactory.smartphone;
 
 public class PixelFactory implements AbstractSmartPhoneFactory {
 
-  @Override
-  public String getVersion() {
-    return "10.0";
+  private final Cpu cpu;
+
+  private final Browser browser;
+
+  public PixelFactory(Cpu cpu, Browser browser) {
+    this.cpu = cpu;
+    this.browser = browser;
   }
 
   @Override
-  public String getCpu() {
-    return "Snapdragon 845";
+  public Cpu getCpu() {
+    return cpu;
   }
 
   @Override
-  public String getDefaultBrowser() {
-    return "Android Chrome";
+  public Browser getDefaultBrowser() {
+    return browser;
   }
 }
