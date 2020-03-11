@@ -3,11 +3,11 @@ package com.nabetama.abstractfactory.smartphone;
 import lombok.Data;
 
 @Data
-public abstract class Browser {
+public class Browser {
 
   private String name;
 
-  protected Browser(String name) {
+  public Browser(String name) {
     this.name = name;
   }
 }

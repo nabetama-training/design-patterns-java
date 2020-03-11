@@ -1,6 +1,10 @@
 package com.nabetama.abstractfactory.smartphone;
 
-public abstract class Cpu {
+import lombok.Data;
+import lombok.Getter;
+
+@Data
+public class Cpu {
 
   public Cpu(String name) {
     this.name = name;
