@@ -1,5 +1,6 @@
 package com.nabetama.bridge.display;
 
+// Implementor
 public interface DisplayImpl {
 
   String rawOpen();

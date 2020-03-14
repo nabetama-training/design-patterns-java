@@ -1,5 +1,6 @@
 package com.nabetama.bridge.display;
 
+// ConcreteImplementor
 public class StringDisplayImpl implements DisplayImpl {
 
   @Override

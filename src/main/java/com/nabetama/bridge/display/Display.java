@@ -1,5 +1,6 @@
 package com.nabetama.bridge.display;
 
+// Role: Abstraction
 public class Display {
   private DisplayImpl impl;
 

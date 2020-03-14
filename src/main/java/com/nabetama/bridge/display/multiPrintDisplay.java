@@ -1,5 +1,6 @@
 package com.nabetama.bridge.display;
 
+// Role: RefinedAbstraction
 public class multiPrintDisplay extends Display {
 
   public multiPrintDisplay(DisplayImpl impl) {
