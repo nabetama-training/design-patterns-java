@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Browser {
 
-  private String name;
+  private final String name;
 
   public Browser(String name) {
     this.name = name;

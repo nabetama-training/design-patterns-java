@@ -5,12 +5,14 @@ import com.nabetama.abstractfactory.smartphone.Browser;
 import com.nabetama.abstractfactory.smartphone.Cpu;
 import com.nabetama.abstractfactory.smartphone.IPhoneFactory;
 import com.nabetama.abstractfactory.smartphone.PixelFactory;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class SmartPhoneFactoryTest {
 
-  private AbstractSmartPhoneFactory createSmartPhone(String os) throws IllegalArgumentException{
+  private AbstractSmartPhoneFactory createSmartPhone(String os) throws IllegalArgumentException {
     switch (os.toUpperCase()) {
       case "IOS":
         return new IPhoneFactory(new Cpu("A13 Bionic"), new Browser("mobile Safari"));
@@ -25,15 +27,20 @@ public class SmartPhoneFactoryTest {
   void androidFactoryTest() {
     // android を引数に渡せば必ずandroidを作ってくれる
     AbstractSmartPhoneFactory androidPhone = createSmartPhone("android");
-    assertEquals(androidPhone.getCpu().getName(), "Snapdragon 845");
-    assertEquals(androidPhone.getDefaultBrowser().getName(), "android Chrome");
+    assertEquals("Snapdragon 845", androidPhone.getCpu().getName());
+    assertEquals("android Chrome", androidPhone.getDefaultBrowser().getName());
   }
 
   @Test
   void iphoneFactoryTest() {
     // iosを引数に渡せば必ずiPhoneを作ってくれる
     AbstractSmartPhoneFactory iPhone = createSmartPhone("ios");
-    assertEquals(iPhone.getCpu().getName(), "A13 Bionic");
-    assertEquals(iPhone.getDefaultBrowser().getName(), "mobile Safari");
+    assertEquals("A13 Bionic", iPhone.getCpu().getName());
+    assertEquals("mobile Safari", iPhone.getDefaultBrowser().getName());
+  }
+
+  @Test
+  void illegalArgumentExceptionTest() {
+    assertThrows(IllegalArgumentException.class, () -> createSmartPhone("unknown"));
   }
 }

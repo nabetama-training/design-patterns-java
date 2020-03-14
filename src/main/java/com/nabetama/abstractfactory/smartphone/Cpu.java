@@ -1,7 +1,6 @@
 package com.nabetama.abstractfactory.smartphone;
 
 import lombok.Data;
-import lombok.Getter;
 
 @Data
 public class Cpu {
@@ -10,5 +9,5 @@ public class Cpu {
     this.name = name;
   }
 
-  private String name;
+  private final String name;
 }
