@@ -8,6 +8,10 @@ class ContextTest {
 
   @Test
   void contextInterfaceTest() {
+    /*
+     The Strategy Pattern separates the algorithm part from the other implements.
+     Then, only the interface part of the algorithm tobe public.
+    */
     Context context1 = new Context(new ConcreteStrategy1());
     assertEquals("use the algorithm 1", context1.contextInterface());
 
