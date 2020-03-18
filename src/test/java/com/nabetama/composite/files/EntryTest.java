@@ -24,7 +24,10 @@ class EntryTest {
 
     assertEquals("root", rootDir.getName());
     assertEquals(30000, rootDir.getSize());
-    assertEquals("vim/File{name='vim', size=10000}emacs/File{name='emacs', size=20000}", binDir.printList());
+    assertEquals("binvim/File{name='vim', size=10000}binemacs/File{name='emacs', size=20000}", rootDir.printList());
+
+    rootDir.remove(binDir);
+    assertEquals("", rootDir.printList());
   }
 
   @Test
