@@ -34,6 +34,11 @@ public class Directory implements Entry {
     return this;
   }
 
+  public Entry remove(Entry entry) {
+    directory.remove(entry);
+    return this;
+  }
+
   @Override
   public String printList() {
     return printList("");
