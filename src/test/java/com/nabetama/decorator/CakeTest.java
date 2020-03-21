@@ -15,11 +15,11 @@ class CakeTest {
 
   @Test
   void testDecoratedCheesCake() {
-    Cake cheesCake = new CheesCake();
+    CheesCake cheesCake = new CheesCake();
     assertEquals("cheese cake", cheesCake.prepare());
     assertEquals(410, cheesCake.price());
 
-    Cake bakedCheesCake = new BakedCheesCake(cheesCake);
+    Cake bakedCheesCake = new BakedCheesCake<CheesCake>(cheesCake);
     assertEquals("baked cheese cake", bakedCheesCake.prepare());
     assertEquals(420, bakedCheesCake.price());
   }

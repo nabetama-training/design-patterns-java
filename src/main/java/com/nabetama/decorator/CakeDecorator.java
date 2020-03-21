@@ -1,10 +1,10 @@
 package com.nabetama.decorator;
 
-public abstract class CakeDecorator implements Cake {
+public abstract class CakeDecorator <E extends Cake> implements Cake {
 
-  private final Cake cake;
+  private final E cake;
 
-  protected CakeDecorator(Cake cake) {
+  protected CakeDecorator(E cake) {
     this.cake = cake;
   }
 

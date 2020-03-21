@@ -1,8 +1,8 @@
 package com.nabetama.decorator;
 
-public class BakedCheesCake extends CakeDecorator {
+public class BakedCheesCake<C> extends CakeDecorator<CheesCake> {
 
-  protected BakedCheesCake(Cake cake) {
+  protected BakedCheesCake(CheesCake cake) {
     super(cake);
   }
 
